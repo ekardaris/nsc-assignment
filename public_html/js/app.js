@@ -28,14 +28,12 @@ for (var char = 0; char < 26; char++)
     occurences[(char + 10).toString(36)] = occurs;
 }
 
-// console.log(occurences);
 var items = Object.keys(occurences).map(function (key) {
     return [key, occurences[key]];
 });
 items.sort(function (first, second) {
     return second[1] - first[1];
 });
-console.log(items);
 
 var text = "";
 for (var i = 0; i < paragraph.length; i++)
